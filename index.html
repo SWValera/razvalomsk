@@ -574,11 +574,25 @@
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       document.querySelectorAll('a[href^="tel:"]').forEach(function (link) {
+
         link.addEventListener('click', function () {
+
+          const phone = link.getAttribute('href');
+
           if (typeof ym === 'function') {
-            ym(111038014, 'reachGoal', 'phoneClick');
+
+            if (phone.includes('79963963746')) {
+              ym(111038014, 'reachGoal', 'phoneNorth24');
+            }
+
+            if (phone.includes('79237673855')) {
+              ym(111038014, 'reachGoal', 'phoneZavertyaeva');
+            }
+
           }
+
         });
+
       });
     });
   </script>
