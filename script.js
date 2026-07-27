@@ -86,38 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
     revealItems.forEach(item => revealObserver.observe(item));
   }
 
-  // Анимированные счётчики запускаются только один раз.
-  const counters = document.querySelectorAll("[data-count]");
-  const animateCounter = element => {
-    const target = Number(element.dataset.count);
-    const decimals = Number(element.dataset.decimals || 0);
-    const suffix = element.dataset.suffix || "";
-    if (reduceMotion) {
-      element.textContent = target.toFixed(decimals) + suffix;
-      return;
-    }
-    const start = performance.now();
-    const duration = 1500;
-    const frame = now => {
-      const progress = Math.min((now - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 4);
-      const current = target * eased;
-      element.textContent = current.toFixed(decimals) + suffix;
-      if (progress < 1) requestAnimationFrame(frame);
-    };
-    requestAnimationFrame(frame);
-  };
-  if ("IntersectionObserver" in window) {
-    const counterObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        animateCounter(entry.target);
-        observer.unobserve(entry.target);
-      });
-    }, { threshold: .6 });
-    counters.forEach(counter => counterObserver.observe(counter));
-  } else counters.forEach(animateCounter);
-
   // Доступный аккордеон FAQ: открыт только один ответ.
   const faqItems = document.querySelectorAll(".faq-item");
   faqItems.forEach(item => {
