@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://razvalomsk.com/promyvka-radiatora-pechki">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="preload" href="assets/heater-flush-process.webp" as="image" type="image/webp" fetchpriority="high">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20261120-routes">
 
   <script>
     window.YM_COUNTER_ID = 111038014;
@@ -177,7 +177,7 @@
             <p>Промывка радиатора печки</p><h3>Омск, 24-я Северная, 157</h3>
             <a class="branch-phone" href="tel:+79963963746"><svg><use href="#i-phone"></use></svg>8 996 396-37-46</a>
             <span><svg><use href="#i-clock"></use></svg>Ежедневно, 09:00–20:00</span>
-            <div><a class="btn btn-primary" href="tel:+79963963746">Позвонить</a><a class="btn btn-secondary" href="https://yandex.ru/maps/?rtext=~Омск%2C%2024-я%20Северная%20улица%2C%20157&rtt=auto" target="_blank" rel="noopener" onclick="ym(111038014, 'reachGoal', 'routeNorth24')">Построить маршрут</a></div>
+            <div><a class="btn btn-primary" href="tel:+79963963746">Позвонить</a><a class="btn btn-secondary" href="https://yandex.ru/maps/?mode=routes&amp;rtext=~55.023407,73.396498&amp;rtt=auto&amp;ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D128984221106" data-route-branch="severnaya" rel="noopener">Построить маршрут</a></div>
           </article>
           <div class="map-card glass reveal"><iframe src="https://yandex.ru/map-widget/v1/?mode=search&text=Омск%2C%2024-я%20Северная%20улица%2C%20157&z=16" title="Карта проезда: Омск, 24-я Северная, 157" loading="lazy" allowfullscreen></iframe></div>
         </div>
@@ -202,6 +202,21 @@
   </footer>
 
   <div class="mobile-bar single-action"><a href="tel:+79963963746"><svg><use href="#i-phone"></use></svg>Позвонить · 8 996 396-37-46</a></div>
+  <dialog class="privacy-modal route-modal" id="route-modal" aria-labelledby="route-title" aria-describedby="route-address">
+    <div>
+      <button class="modal-close" type="button" aria-label="Закрыть выбор карты">×</button>
+      <h2 id="route-title">Построить маршрут</h2>
+      <p id="route-address"></p>
+      <p>В какой карте открыть маршрут?</p>
+      <div class="route-choices">
+        <a class="btn btn-secondary" href="https://yandex.ru/maps/" data-route-provider="yandex">Яндекс Карты</a>
+        <a class="btn btn-secondary" href="https://2gis.ru/omsk/" data-route-provider="2gis">2ГИС</a>
+      </div>
+      <p class="route-hint">Для маршрута от вас разрешите доступ к местоположению.</p>
+      <p id="route-status" role="status" aria-live="polite"></p>
+    </div>
+  </dialog>
+
   <dialog class="privacy-modal" id="privacy-modal"><div><button class="modal-close" type="button" aria-label="Закрыть">×</button><p class="eyebrow"><span></span> Документ</p><h2>Политика конфиденциальности</h2><p>Сайт не собирает и не хранит персональные данные через формы. При нажатии на номер телефона или кнопку маршрута пользователь самостоятельно переходит в приложение телефона или карт.</p><p>Технические данные могут обрабатываться хостингом, Яндекс.Метрикой или картографическим сервисом в соответствии с их политиками.</p><p>Связаться с нами: <a href="tel:+79963963746">8 996 396-37-46</a>.</p></div></dialog>
 
   <svg class="svg-sprite" aria-hidden="true"><defs>
@@ -215,6 +230,6 @@
     <symbol id="i-heat" viewBox="0 0 24 24"><path d="M8 3c3 3-2 5 1 8s5-1 4-3c4 3 5 8 2 11a7 7 0 0 1-10-1C2 14 5 10 8 8c-1 3 1 4 2 3"/></symbol>
     <symbol id="i-flow" viewBox="0 0 24 24"><path d="M4 7h13l-3-3M20 17H7l3 3M17 7l-3 3M7 17l3-3"/></symbol>
   </defs></svg>
-  <script src="script.js" defer></script>
+  <script src="script.js?v=20261120-routes" defer></script>
 </body>
 </html>

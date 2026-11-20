@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://razvalomsk.com/promyvka-forsunok">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="preload" href="assets/injector-cleaning.webp" as="image" type="image/webp" fetchpriority="high">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20261120-routes">
 
   <script>
     window.YM_COUNTER_ID = 111038014;
@@ -174,7 +174,7 @@
             <p>Промывка и чистка форсунок</p><h3>Омск, 24-я Северная, 157</h3>
             <a class="branch-phone" href="tel:+79963963746"><svg><use href="#i-phone"></use></svg>8 996 396-37-46</a>
             <span><svg><use href="#i-clock"></use></svg>Ежедневно, 09:00–20:00</span>
-            <div><a class="btn btn-primary" href="tel:+79963963746">Позвонить</a><a class="btn btn-secondary" href="https://yandex.ru/maps/?rtext=~Омск%2C%2024-я%20Северная%20улица%2C%20157&rtt=auto" target="_blank" rel="noopener" onclick="ym(111038014, 'reachGoal', 'routeNorth24')">Построить маршрут</a></div>
+            <div><a class="btn btn-primary" href="tel:+79963963746">Позвонить</a><a class="btn btn-secondary" href="https://yandex.ru/maps/?mode=routes&amp;rtext=~55.023407,73.396498&amp;rtt=auto&amp;ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D128984221106" data-route-branch="severnaya" rel="noopener">Построить маршрут</a></div>
           </article>
           <div class="map-card glass reveal"><iframe src="https://yandex.ru/map-widget/v1/?mode=search&text=Омск%2C%2024-я%20Северная%20улица%2C%20157&z=16" title="Карта проезда: Омск, 24-я Северная, 157" loading="lazy" allowfullscreen></iframe></div>
         </div>
@@ -199,6 +199,21 @@
   </footer>
 
   <div class="mobile-bar single-action"><a href="tel:+79963963746"><svg><use href="#i-phone"></use></svg>Позвонить · 8 996 396-37-46</a></div>
+  <dialog class="privacy-modal route-modal" id="route-modal" aria-labelledby="route-title" aria-describedby="route-address">
+    <div>
+      <button class="modal-close" type="button" aria-label="Закрыть выбор карты">×</button>
+      <h2 id="route-title">Построить маршрут</h2>
+      <p id="route-address"></p>
+      <p>В какой карте открыть маршрут?</p>
+      <div class="route-choices">
+        <a class="btn btn-secondary" href="https://yandex.ru/maps/" data-route-provider="yandex">Яндекс Карты</a>
+        <a class="btn btn-secondary" href="https://2gis.ru/omsk/" data-route-provider="2gis">2ГИС</a>
+      </div>
+      <p class="route-hint">Для маршрута от вас разрешите доступ к местоположению.</p>
+      <p id="route-status" role="status" aria-live="polite"></p>
+    </div>
+  </dialog>
+
   <dialog class="privacy-modal" id="privacy-modal"><div><button class="modal-close" type="button" aria-label="Закрыть">×</button><p class="eyebrow"><span></span> Документ</p><h2>Политика конфиденциальности</h2><p>Сайт не собирает и не хранит персональные данные через формы. При нажатии на номер телефона или кнопку маршрута пользователь самостоятельно переходит в приложение телефона или карт.</p><p>Технические данные могут обрабатываться хостингом, Яндекс.Метрикой или картографическим сервисом в соответствии с их политиками.</p><p>Связаться с нами: <a href="tel:+79963963746">8 996 396-37-46</a>.</p></div></dialog>
 
   <svg class="svg-sprite" aria-hidden="true"><defs>
@@ -215,6 +230,6 @@
     <symbol id="i-spray" viewBox="0 0 24 24"><path d="M4 5h8v4H4zM12 7h4M17 4v6M19 5v4M9 12l-4 8M12 12v9M15 12l4 8"/></symbol>
     <symbol id="i-clean" viewBox="0 0 24 24"><path d="M12 3c3 4 6 7 6 11a6 6 0 0 1-12 0c0-4 3-7 6-11zM8 16c1 2 3 3 5 2"/></symbol>
   </defs></svg>
-  <script src="script.js" defer></script>
+  <script src="script.js?v=20261120-routes" defer></script>
 </body>
 </html>
